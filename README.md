@@ -22,4 +22,6 @@ Install  :
  
 Source of dygraphs : http://dygraphs.com, https://github.com/danvk/dygraphs Copyright (c) 2009 Dan Vanderkam
 
+** the collectdata.sh script will remove the .txt ans .csv files older than 7 days that are present in the folder **
+
 Licence : MIT
