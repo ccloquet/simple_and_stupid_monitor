@@ -8,5 +8,6 @@ rendering graphs : 1 html + 1 library (dygraphs : js + css)
 
 No access control provided, so use it in a local environment or with a security layer in front
 
-Source : dygraphs : http://dygraphs.com, https://github.com/danvk/dygraphs
+Source of dygraphs : http://dygraphs.com, https://github.com/danvk/dygraphs Copyright (c) 2009 Dan Vanderkam
+
 Licence : MIT
