@@ -20,7 +20,10 @@
 var g     = []
 var adr   = window.location.search
 var fname = adr.substr(1)
-
+if(fname=="")
+{
+	fname = new Date().toISOString().slice(0, 10).replace(/-/g,'')
+}
 var titles = []
 titles[2] = "process in run queue"
 titles[3] = "Blocked processes"
@@ -46,3 +49,10 @@ for (var i=2; i<=18; ++i)
 </script>
 </body>
 </html>
+<!--http://dygraphs.com-->
+<!--
+
+continuously : collectdata.sh
+periodically : parseout.sh
+
+-->
