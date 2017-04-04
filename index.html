@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="60"> 
+<link rel="stylesheet" href="dygraph.min.css" />
+<script src="dygraph.min.js"></script>
+<style>
+	.gr {display:inline-block; width:500px; height:300px;}
+</style>
+</head>
+<body>
+<span id="graphdiv2" class="gr">a</span><span id="graphdiv3" class="gr">b</span><span id="graphdiv4" class="gr">b</span>
+<span id="graphdiv5" class="gr">b</span><span id="graphdiv6" class="gr">b</span><span id="graphdiv7" class="gr">b</span>
+<span id="graphdiv8" class="gr">b</span><span id="graphdiv9" class="gr">b</span><span id="graphdiv10" class="gr">b</span>
+<span id="graphdiv11" class="gr">b</span><span id="graphdiv12" class="gr">b</span><span id="graphdiv13" class="gr">b</span>
+<span id="graphdiv14" class="gr">b</span><span id="graphdiv15" class="gr">b</span><span id="graphdiv16" class="gr">b</span>
+<span id="graphdiv17" class="gr">b</span><span id="graphdiv18" class="gr">b</span>
+
+<script type="text/javascript">
+var g     = []
+var adr   = window.location.search
+var fname = adr.substr(1)
+
+var titles = []
+titles[2] = "process in run queue"
+titles[3] = "Blocked processes"
+titles[4] = "Mémoire virtuelle utilisée (ko)"
+titles[5] = "Mémoire physique libre (ko)"
+titles[6] = "Mémoire utilisée comme tampons d'E/S (ko)"
+
+titles[8] = 'swap lu [ko/s]'
+titles[9] = 'swap écrit [ko/s]'
+titles[10] = 'blocs lus [/s]'
+titles[11] = 'blocs écrits [/s]'
+titles[14] = 'user time'
+titles[15] = 'system time'
+titles[16] = 'idle time'
+titles[17] = 'temps consommé en attente des E/S'
+titles[20] = ''
+
+for (var i=2; i<=18; ++i)
+{
+  g[i] = new Dygraph(    document.getElementById("graphdiv"+i),    fname+"_"+i+".csv",    {title:titles[i]}  );
+}
+ 
+</script>
+</body>
+</html>
